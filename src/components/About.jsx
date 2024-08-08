@@ -19,7 +19,7 @@ const About = () => {
             Geetanjali Institute of Technical
             Studies (GITS), Dabok
             </span>
-            <h1>- Bachelor of Computer Applications
+            <h1>- Bachelor Of Computer Applications
             (BCA)</h1>
 
         </div>

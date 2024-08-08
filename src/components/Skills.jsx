@@ -12,77 +12,35 @@ import reactnative from "../../src/assets/reactnative.png";
 
 function Skills() {
   const cardItem = [
-    {
-      id: 1,
-      logo: html,
-      name: "HTML, HTML5",
-    },
-    {
-      id: 1,
-      logo: css,
-      name: "CSS, CSS3",
-    },
-    {
-      id: 1,
-      logo: js,
-      name: "JAVASCRIPT",
-    },
-    {
-      id: 1,
-      logo: ts,
-      name: "TYPESCRIPT",
-    },
-    {
-      id: 1,
-      logo: bootstrap,
-      name: "BOOTSTRAP",
-    },
-    {
-      id: 1,
-      logo: tailwind,
-      name: "TAILWIND CSS",
-    },
-    {
-      id: 1,
-      logo: jquery,
-      name: "JQUERY",
-    },
-    {
-      id: 1,
-      logo: react,
-      name: "REACT JS",
-    },
-    {
-      id: 1,
-      logo: next,
-      name: "NEXT JS",
-    },
-    {
-      id: 1,
-      logo: reactnative,
-      name: "REACT NATIVE",
-    },
+    { id: 1, logo: html, name: "HTML, HTML5" },
+    { id: 2, logo: css, name: "CSS, CSS3" },
+    { id: 3, logo: js, name: "JAVASCRIPT" },
+    { id: 4, logo: ts, name: "TYPESCRIPT" },
+    { id: 5, logo: bootstrap, name: "BOOTSTRAP" },
+    { id: 6, logo: tailwind, name: "TAILWIND CSS" },
+    { id: 7, logo: jquery, name: "JQUERY" },
+    { id: 8, logo: react, name: "REACT JS" },
+    { id: 9, logo: next, name: "NEXT JS" },
+    { id: 10, logo: reactnative, name: "REACT NATIVE" },
   ];
+
   return (
-    <div name="Skills" className="max-w-screen-6xl conatiner mx-auto px-4 md:px-20 mt-24">
-      <div>
-        <h1 className="text-3xl font-bold mv-5">Skills</h1>
-        <div className="grid grid-col-2 md:grid-cols-3 gap-9 my-8">
-          {cardItem.map(({ id, logo, name }) => (
-            <div
-              className="flex flex-col items-center justify-center  border-[2px] rounded-full  shadow-md  p-1 cursor-pointer hover:scale-105 duration-300"
-              key={id}
-            >
-              <img
-                src={logo}
-                className="w-[150px] p-1 rounded-full border-[2px]"
-                alt=""
-              />
-              <div>
-              <div className="font-bold text-3xl mb-2">{name}</div></div>
-            </div>
-          ))}
-        </div>
+    <div name="Skills" className="max-w-screen-6xl mx-auto px-4 md:px-8 mt-24">
+      <h1 className="text-4xl font-bold text-center mb-12">Skills</h1>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {cardItem.map(({ id, logo, name }) => (
+          <div
+            key={id}
+            className="flex flex-col items-center justify-center border border-gray-300 rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src={logo}
+              alt={name}
+              className="w-24 h-24 mb-4 rounded-full border border-gray-200"
+            />
+            <span className="font-semibold text-lg text-center">{name}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
